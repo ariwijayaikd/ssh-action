@@ -13,6 +13,8 @@ inputs:
     description: "SSH username."
   password:
     description: "SSH password."
+  protocol:
+    description: 'The IP protocol to use. Valid values are "tcp", "tcp4" or "tcp6". Default to tcp.'
   sync:
     description: "Enable synchronous execution if multiple hosts are involved."
   use_insecure_cipher:
@@ -40,6 +42,8 @@ inputs:
     description: "SSH proxy username."
   proxy_password:
     description: "SSH proxy password."
+  proxy_protocol:
+    description: 'The IP protocol to use. Valid values are "tcp", "tcp4" or "tcp6". Default to tcp.'
   proxy_passphrase:
     description: "SSH proxy key passphrase."
   proxy_timeout:

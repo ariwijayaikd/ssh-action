@@ -282,3 +282,25 @@ jobs:
           script: |
             whoami && echo 'hello world' && touch todo.txt
             sudo whoami
+
+  testing06:
+    name: ipv6
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v1
+
+      - name: testing in ipv6
+        uses: ./
+        with:
+          host: "fe80::6c:d6ff:fe09:79d4"
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          protocol: "tcp6"
+          script_stop: true
+          request_pty: true
+          command_timeout: 30s
+          script: |
+            whoami && echo 'hello world' && touch todo.txt
+            sudo whoami
