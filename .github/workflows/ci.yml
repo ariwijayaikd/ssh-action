@@ -298,9 +298,6 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           protocol: "tcp6"
-          script_stop: true
-          request_pty: true
           command_timeout: 30s
           script: |
-            whoami && echo 'hello world' && touch todo.txt
-            sudo whoami
+            whoami
